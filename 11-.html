@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>头像框</title>
+		<style>
+      body {
+        background-color: #000;
+      }
+			.headback{
+				width: 600px;
+				height: 600px;
+				position: relative;
+				top: 50px;
+				left: 200px;
+				overflow: hidden;
+        box-shadow: 0 0 20px red;
+			}
+			.headborder{
+				width: 1000px;
+				height: 1000px;
+        background-image: linear-gradient(to left,#fff 17%,red 50%,#fff 17%,green 50%,#fff);
+				position: absolute;
+				top: -200px;
+				left: -200px;
+				transition: all 2s linear;
+        animation: run 7s linear infinite;
+			}
+			.headimg{
+				width: 580px;
+				height: 580px;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+      @keyframes run {
+        from {
+          transform: rotateZ(0);
+        }
+        to {
+          transform: rotateZ(1turn);
+        }
+      }
+		</style>
+	</head>
+	<body>
+		<div class="headback">
+			<div class="headborder" id="headborder"></div>
+			<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202004%2F13%2F20200413142218_afsbd.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650878412&t=00ed8d159bd623739962a8c595ffcf55" class="headimg">
+		</div>
+	</body>
+  </html>
